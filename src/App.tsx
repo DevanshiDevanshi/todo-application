@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-200">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="mb-5 text-3xl font-bold">Todo List</h1>
+        <h1 className="mb-5 text-3xl font-bold">Todo List 1</h1>
         <form className="flex w-full max-w-2xl">
           <div className="flex-grow items-center border-b-2 border-teal-500 py-2">
             <input
