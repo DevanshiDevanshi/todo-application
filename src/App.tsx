@@ -6,7 +6,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center">
         <h1 className="mb-5 text-3xl font-bold">Todo List</h1>
         <form className="flex w-full max-w-2xl">
-          <div className="flex-grow items-center border-b border-b-2 border-teal-500 py-2">
+          <div className="flex-grow items-center border-b-2 border-teal-500 py-2">
             <input
               className="appearance-none bg-transparent border-none text-gray-700 py-1 px-2 leading-tight focus:outline-none"
               type="text"
