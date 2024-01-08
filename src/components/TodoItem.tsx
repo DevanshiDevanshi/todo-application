@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { TodoType } from "../type/TodoType";
 import { useFormik } from "formik";
-// import {
-//   AiFillDelete,
-//   AiFillEdit,
-//   AiOutlineClose,
-//   AiOutlinePlus,
-// } from "react-icons/ai";
 import * as Yup from "yup";
-import { deleteTodo, updateTodo } from "../apis/TodoApi";
+import { updateTodo } from "../apis/TodoApi";
 
 type todoItemType = {
   todoItem: TodoType;
@@ -35,10 +29,11 @@ export const TodoItem = ({
         .max(30, "Must be 30 characters or less")
         .required(),
     }),
-    onSubmit: async (values, actions) => {
+    onSubmit: async (values) => {
       console.log(`values:: ${values}`);
       try {
         const res = await updateTodo(values.id, values);
+        console.log(res);
       } catch (err) {
         console.log(`error updating todo`);
       }
