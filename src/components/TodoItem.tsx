@@ -31,6 +31,7 @@ export const TodoItem = ({
     }),
     onSubmit: async (values) => {
       console.log(`values:: ${values}`);
+      console.log(status);
       try {
         const res = await updateTodo(values.id, values);
         console.log(res);
@@ -45,21 +46,21 @@ export const TodoItem = ({
     setTodoUpdateTask(e.target.value);
   };
 
-  // update
-  const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (todoUpdateTask.trim().length === 0) {
-      window.alert("Please enter your details");
-      return;
-    }
-    onUpdate({ ...todoItem, task: todoUpdateTask });
-    setEdit(false);
-  };
+  // // update
+  // const handleUpdate = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   if (todoUpdateTask.trim().length === 0) {
+  //     window.alert("Please enter your details");
+  //     return;
+  //   }
+  //   onUpdate({ ...todoItem, task: todoUpdateTask });
+  //   setEdit(false);
+  // };
 
-  const handleStatusUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const status = e.target.checked ? "completed" : "active";
-    onStatusUpdate({ ...todoItem, status });
-  };
+  // const handleStatusUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const status = e.target.checked ? "completed" : "active";
+  //   onStatusUpdate({ ...todoItem, status });
+  // };
 
   // delete
   const handleDelete = () => onDelete(todoItem);
